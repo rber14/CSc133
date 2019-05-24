@@ -6,7 +6,7 @@ import com.codename1.charts.util.ColorUtil;
 
 public class Drone extends Movable {
 	
-//super or this for set size?
+    //super or this for set size?
 	/**
 	 * 
 	 * @param x
@@ -29,6 +29,9 @@ public class Drone extends Movable {
 		
 	}
 	
+	/**
+	 * Check bounds and changes heading
+	 */
 	public void headingChange()
 	{
 		if(this.getX() < 1024 && this.getX() > 0 && this.getY() < 768 && this.getY() > 0)

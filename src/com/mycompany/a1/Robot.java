@@ -151,9 +151,21 @@ public class Robot extends Movable implements ISteerable{
 		}
 	}
 	
-	public void hitDrone()
+	public void hitRobot()
 	{
 		this.energyLevel = this.energyLevel - 1;
+		this.updateRobotSpeed();
+		this.setColor(ColorUtil.rgb(255,(10 * (20 - this.getEnergyLevel())),0));
+		if(this.getEnergyLevel() <= 0)
+		{
+				this.energyLevel = 0;
+				this.setTheRobotIsDead(true);
+		}
+		
+	}
+	public void hitDrone()
+	{
+		this.energyLevel = this.energyLevel - 2;
 		this.updateRobotSpeed();
 		this.setColor(ColorUtil.rgb(255,(10 * (20 - this.getEnergyLevel())),0));
 		if(this.getEnergyLevel() <= 0)
@@ -188,7 +200,7 @@ public class Robot extends Movable implements ISteerable{
 		}
 	}
 	
-	public void reset()
+	public void robotRebot()
 	{
 		this.setColor(ColorUtil.rgb(255,0,0));
 		this.setX(50);

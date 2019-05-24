@@ -27,7 +27,7 @@ public class EnergyStation extends Fixed {
 	public String toString() 
 	{
 		String parentDesc = super.toString();
-		String myDesc = "size= " + this.getSize() + "capacity= " + capacity;
+		String myDesc = " size= " + this.getSize() + " capacity= " + capacity;
 		return "EnergyStation: " + parentDesc + myDesc;
 	}
 	
